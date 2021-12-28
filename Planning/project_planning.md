@@ -4,50 +4,67 @@
 
 ## Goals
 
-### **What is the goal of this project?**
-1. To design a program that can view a 3D model.
+### Project Goals
+1. To design a program that can render a 3D model.
 2. To learn about different OS's windowing APIs.
 3. To learn about different OS's graphics APIs.
 
-### **Who is the recipient(s) of the product?**
-- Me
+### Recipients
+- Eddie Soto (me)
 
 ---
 
 ## Planning
 
-### **Describe the Minimum Valuable Product: a product with the minimum amount of features needed so that testers can provide feedback to you.**
-- A tab 
-- Feature 2
-- Feature 3
-
-*You can plan features separately via the feature planning template on [the repository on GitHub where you got this template.](https://github.com/EddieAS07/project_templates)*
+### Features (Minimum Valuable Product)
+- Window that renders an .obj file
+- Menu to open an .obj file
+- Keyboard shortcuts to move around the model
+- Move mouse to move the camera around
 
 ### User
 
-#### **How will the user experience your project? Describe how one would use your product.**
-- *Insert descriptions here*
+#### User Experience
+- When the application is opened, the user will see a blank scene with no model being rendered.
+- The user will go to the menu and select Open > Load model.
+- A file select dialog will prompt the user to open a .obj file.
+- When the model is selected, the window will reload and show the model.
+- The user can use either WASD or the arrow keys to move around the model.
+- The user can move the mouse to rotate the camera and see the model from another perspective. 
 
 ### Developer
 
-#### **What tools will be used? You might want to do some research before completing this part.**
-- *Describe tools here*
+#### Tools:
+- The C++ Programming Language
+    - MSVC compiler
+- WinAPI
+- OpenGL
+    - Versions 3 and up (no immediate mode)
 
-#### **How will the project be implemented? This also requires some research.**
-- *Describe implementation here*
+#### Outline of implementation
+- A window class will  display a window on the screen using the OS's window API.
+    - A menu class will put a menu on the OS's screen.
+    - An input class will handle keyboard inputs and signal other classes accordingly.
+- A renderer class will contain the code to render graphics on the screen.
+    - A shader class will contain the code to apply transformations to vertices and fragments.
+    - A camera class will move the scene around in response to movements.
+    - A model loader class will read a model and get its data.
+- A file class will contain the code to read and write to files.
+- A logger class will log debug information about the program to a file.
 
 ---
 
 ## Deadlines
 
-### Describe how long you think your project will take *if everything goes right*.
+### Duration: About **2-3 months** to implement everything correctly.
 
 #### **Obviously, projects will never, ever, go 100% according to plan, because life just gets in the way.**
-- *Thoughts here*
 
-### For each feature, how much time do you want to allot to further plan and implement it?
-- Feature 1:
-- Feature 2:
-- Feature 3:
+### Feature duration:
+- Window: 3-6 weeks
+- Menu: 1-2 weeks
+- Model: 2-4 weeks
+- Keyboard shortcuts: 2-4 weeks
+- Mouse: 2-4 weeks
 
 #### **Note: your estimates will probably be highly inaccurate. As you work on the features, you can refine the time needed here as you gain more experience on what you are working on.**
